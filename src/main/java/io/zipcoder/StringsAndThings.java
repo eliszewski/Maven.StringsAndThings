@@ -80,9 +80,8 @@ public class StringsAndThings {
      */
     public Boolean gIsHappy(String input){
         String newString = input.replaceAll("gg","1");
-        boolean anyG = true;
         for(int i = 0; i < newString.length(); i++){
-            if(newString.charAt(i) == 'g'){
+            if(newString.charAt(i) == 'g' || input.contains(String.valueOf('g')) == false){ // check that string contains g to begin with
                 return false;
             }
 
